@@ -27,13 +27,11 @@ export default function GetStarted() {
     <section className="bg-[#2C69D1] py-16 px-6 text-white">
       <h2 className="mb-12 text-center text-3xl font-semibold">Get Started with EKAMED</h2>
 
-      
-
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="rounded-2xl bg-white/10 p-6 text-center shadow-lg backdrop-blur-sm border border-white/20"
+            className="rounded-2xl bg-white/10 p-6 text-center shadow-lg backdrop-blur-sm border border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-black/20 hover:scale-105"
           >
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
               {step.icon}

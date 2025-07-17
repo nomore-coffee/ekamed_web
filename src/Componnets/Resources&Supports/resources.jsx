@@ -42,23 +42,36 @@ export default function ResourcesSupport() {
           Resources & Support
         </h2>
 
-        <div className="mx-auto max-w-5xl grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mx-auto max-w-5xl grid gap-6 sm:grid-cols-2 md:grid-cols-3 items-start">
           {resources.map((res, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-2xl bg-white shadow hover:shadow-md transition"
+              className="group overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               {/* Top Placeholder for Image */}
               <div className="h-56 w-full bg-red-500"></div>
 
-              {/* Bottom Text */}
-              <div className="p-6">
+              {/* Bottom Text - Expandable on hover */}
+              <div className="p-6 transition-all duration-300">
                 <a
                   href={res.link}
-                  className="text-sm font-medium text-[#2C69D1] hover:underline block"
+                  className="text-sm font-medium text-[#2C69D1] hover:underline block mb-4"
                 >
                   {res.title}
                 </a>
+                
+                {/* Hidden content that appears on hover */}
+                <div className="max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 overflow-hidden transition-all duration-300">
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                    Discover comprehensive resources and get the support you need to make the most of EKAMED.
+                  </p>
+                  <button className="inline-flex items-center px-4 py-2 text-white text-sm font-medium bg-[#2C69D1] border border-[#2C69D1] rounded-full hover:bg-white hover:text-[#2C69D1] transition-colors duration-200">
+                    Learn More
+                    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           ))}

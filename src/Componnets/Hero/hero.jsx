@@ -12,8 +12,8 @@ export default function Hero() {
           className="absolute top-0 left-0 w-full h-[40vh]"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(44, 105, 209, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(44, 105, 209, 0.2) 1px, transparent 1px)",
-            backgroundSize: "35px 35px",
+              "linear-gradient(to right, rgba(44, 105, 209, 0.6) 1px, transparent 1px), linear-gradient(to bottom, rgba(44, 105, 209, 0.6) 1px, transparent 1px)",
+            backgroundSize: "30px 30px",
             transform: "perspective(800px) rotateX(55deg)",
             transformOrigin: "top center",
             maskImage: "linear-gradient(to bottom, black 0%, transparent 70%)",
@@ -25,9 +25,9 @@ export default function Hero() {
         <div
           className="absolute bottom-0 left-0 w-full h-[40vh]"
           style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(209, 44, 63, 0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(44, 105, 209, 0.2) 1px, transparent 1px)",
-            backgroundSize: "35px 35px",
+             backgroundImage:
+              "linear-gradient(to right, rgba(44, 105, 209, 0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(44, 105, 209, 0.5) 1px, transparent 1px)",
+            backgroundSize: "30px 30px",
             transform: "perspective(800px) rotateX(55deg)",
             transformOrigin: "bottom center",
             maskImage: "linear-gradient(to top, black 0%, transparent 70%)",
