@@ -45,48 +45,37 @@ export default function PricingCards() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="group flex flex-col rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer h-full hover:-translate-y-1"
+            className="rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-2xl cursor-pointer h-full"
           >
-            {/* Subtle background tint on hover */}
-            <div className="absolute inset-0 bg-[#2C69D1]/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <div className="mb-4">
+              {card.icon}
+            </div>
             
-            <div className="relative z-10">
-              {/* Icon with simple hover effect */}
-              <div className="mb-4 transition-transform duration-300 group-hover:scale-105">
-                {card.icon}
-              </div>
-              
-              {/* Title */}
-              <h3 className="mb-4 text-lg font-semibold text-[#2C69D1]">
-                {card.title}
-              </h3>
-              
-              {/* Clean bullet points */}
-              <ul className="mb-6 list-disc space-y-2 pl-4 text-sm text-gray-700 flex-grow">
-                {card.bullets.map((point, i) => (
-                  <li key={i} className="transition-colors duration-300 group-hover:text-gray-800">
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              
-              {/* Enhanced button */}
-              <div className="mt-auto">
-                <a
-                  href={card.link}
-                  className="inline-flex items-center text-sm font-medium text-[#2C69D1] transition-all duration-300 hover:text-white px-4 py-2 rounded-full border border-[#2C69D1] hover:bg-[#2C69D1] hover:shadow-lg transform hover:scale-105"
+            <h3 className="mb-4 text-lg font-semibold text-[#2C69D1]">
+              {card.title}
+            </h3>
+            
+            <ul className="mb-6 list-disc space-y-2 pl-4 text-sm text-gray-700 flex-grow">
+              {card.bullets.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+            
+            <div className="mt-auto">
+              <a
+                href={card.link}
+                className="inline-flex items-center text-sm font-medium text-[#2C69D1] hover:text-white px-4 py-2 rounded-full border  hover:bg-[#2C69D1] transition-colors duration-300"
+              >
+                Learn More
+                <svg 
+                  className="ml-2 w-4 h-4 transition-transform duration-300 hover:translate-x-1" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
                 >
-                  Learn More
-                  <svg 
-                    className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
         ))}
